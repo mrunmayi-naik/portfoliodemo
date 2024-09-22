@@ -1,0 +1,74 @@
+.navbar {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #000000;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+
+.icons {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icons div{
+    margin: 0px 0px 0px 120px;
+}
+  
+.github {
+    font-size: 40px;
+    display: flex;
+}
+
+.linkedin {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.mail {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+  
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      z-index: 1;
+    }
+  
+    .navbar-links.open {
+      display: flex;
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  }
+  
