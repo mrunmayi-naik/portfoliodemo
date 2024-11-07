@@ -1,74 +1,97 @@
+/* Base Styles */
 .navbar {
-    display: flex;
-    padding: 10px 20px;
-    background-color: #000000;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: white;
+}
 
 .icons {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;  /* Space between icons */
+  align-items: center;
 }
 
-.icons div{
-    margin: 0px 0px 0px 120px;
-}
-  
-.github {
-    font-size: 40px;
-    display: flex;
+.icons div {
+  font-size: 30px;  /* Adjusted size for better alignment */
 }
 
-.linkedin {
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  margin-right: 20px;  /* Add margin to the right for spacing */
 }
 
-.mail {
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
 }
-  
+
+.navbar-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Navbar Links (Mobile) */
   .navbar-links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navbar-links a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .navbar-toggle {
     display: none;
-    font-size: 24px;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  /* Mobile Navbar Icons */
+  .icons {
+    justify-content: center;
+    gap: 10px;
+    font-size: 25px;  /* Slightly smaller icons */
+  }
+
+  /* Toggle Button Styles */
+  .navbar-toggle {
+    display: block;
+    font-size: 35px;
+    color: white;
+    margin-left: auto;
     cursor: pointer;
   }
-  
-  @media (max-width: 768px) {
-    .navbar-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #333;
-      width: 100%;
-      z-index: 1;
-    }
-  
-    .navbar-links.open {
-      display: flex;
-    }
-  
-    .navbar-toggle {
-      display: block;
-    }
+
+  /* Icon spacing adjustments on mobile */
+  .icons div {
+    margin: 0;
   }
-  
+
+  .navbar-links a {
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #444;
+  }
+
+  .navbar-links a:hover {
+    background-color: #555;
+  }
+}
+
+/* Styling when hovering over the links */
+.navbar-links a:hover {
+  color: #FFD700;  /* Change color on hover */
+}
+
