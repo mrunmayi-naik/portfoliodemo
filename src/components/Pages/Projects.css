@@ -6,7 +6,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two equal columns */
   gap: 40px;
- 
 }
 
 .project-card {
@@ -26,8 +25,8 @@
 .project-image {
   width: 100%;
   height: 350px;
-  
   border-radius: 8px 8px 0 0;
+  object-fit: cover;
 }
 
 .project-title {
@@ -43,7 +42,78 @@
 
 .project-link {
   display: inline-block;
-  
   color: #007BFF;
   text-decoration: none;
+}
+
+/* Responsive Design - For Tablet Screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+  }
+
+  .project-card {
+    height: auto;  /* Let the card height be flexible */
+    padding: 20px;
+  }
+
+  .project-image {
+    height: 250px;  /* Reduce image height for tablets */
+  }
+
+  .project-title {
+    font-size: 1.3em; /* Slightly smaller title font size */
+  }
+
+  .project-description {
+    font-size: 0.9em; /* Slightly smaller description font */
+  }
+}
+
+/* Responsive Design - For Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    gap: 20px; /* Reduce gap between cards */
+  }
+
+  .project-card {
+    height: auto;  /* Let the card height be flexible */
+    padding: 15px;
+  }
+
+  .project-image {
+    height: 200px;  /* Reduce image height for mobile */
+  }
+
+  .project-title {
+    font-size: 1.2em;  /* Further reduce title font size */
+  }
+
+  .project-description {
+    font-size: 0.85em;  /* Smaller description font for mobile */
+  }
+}
+
+/* Responsive Design - For Very Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .projects {
+    padding: 20px; /* Reduce padding for very small screens */
+  }
+
+  .project-card {
+    padding: 10px;  /* Reduce padding inside the card */
+  }
+
+  .project-image {
+    height: 180px;  /* Smaller image height for very small screens */
+  }
+
+  .project-title {
+    font-size: 1.1em;  /* Smaller title font */
+  }
+
+  .project-description {
+    font-size: 0.8em; /* Smaller description font for tiny screens */
+  }
 }
