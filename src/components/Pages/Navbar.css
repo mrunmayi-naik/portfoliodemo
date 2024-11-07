@@ -10,12 +10,15 @@
 
 .icons {
   display: flex;
-  justify-content: flex-start;
-  gap: 20px;  /* Space between icons */
+  justify-content: center;
+  flex: 1;
+  cursor: pointer;
+  /* gap: 20px;  Space between icons */
   align-items: center;
 }
 
 .icons div {
+  margin: 0px 0px 0px 120px;
   font-size: 30px;  /* Adjusted size for better alignment */
 }
 
